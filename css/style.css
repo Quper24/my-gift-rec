@@ -108,6 +108,7 @@ html {
 }
 
 .gift__card-thumb {
+  width: 72px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -210,7 +211,7 @@ html {
 
 .card {
   position: relative;
-  width: 580px;
+  max-width: 580px;
   height: 375px;
   perspective: 1000px;
 }
@@ -238,6 +239,8 @@ html {
   display: block;
   max-width: 100%;
   height: auto;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .card__back {
@@ -310,6 +313,16 @@ html {
   .form {
     row-gap: 12px;
   }
+
+  .congratulations__title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .congratulations__description {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
 }
 
 @media (width <= 980px) {
@@ -337,5 +350,36 @@ html {
 
   .form {
     grid-template-columns: 1fr;
+  }
+
+  .gift__card-thumb {
+    width: 56px;
+    border-radius: 4px;
+  }
+
+  .card {
+    height: calc((186 / 288 * 100vw) - 20px);
+    margin-bottom: 20px;
+  }
+
+  .card__back {
+    padding: 24px;
+  }
+
+  .card__title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .card__message {
+    font-size: 16px;
+  }
+
+  .card__contacts {
+    margin-bottom: 0;
+  }
+
+  .card__subtitle {
+    opacity: 0.5;
   }
 }
